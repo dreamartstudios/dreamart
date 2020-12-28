@@ -1,0 +1,12 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.theme-option{width: 100%; height: 40px; overflow: hidden; display: flex; align-items:center; justify-content: center; 
+    div{width: 30px; height: 30px; border-radius: 2px; border: 1px solid #fff; margin-left: 5px; opacity: .5; &.active{opacity: 1;}}
+    #theme-default{ background-color: #fff; }
+    #theme-dark{ background-color: #333533!important;}
+    #theme-green{ background-color: #00d679;}
+    #theme-red{ background-color: #ff4646;}
+    #theme-yellow{ background-color: #FCF400;}
+    }
+    .dreamart-link{color: #ff4646!important; margin-right: 20px;}
+    
+.dreamart-footer-link{color: #fff!important;}

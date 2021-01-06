@@ -1,0 +1,5 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.bg-body{background: linear-gradient(to right, #ff5858, #f857a6)!important; }
+.form-control{border-radius: 20px!important;}
+
+.btn-login{background: #ff4646!important; border-radius: 20px; color: #fff; &:hover{color: #fff;}}

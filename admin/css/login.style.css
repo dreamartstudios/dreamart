@@ -1,0 +1,26 @@
+/* line 1, login.style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* line 2, login.style.scss */
+.bg-body {
+  background: -webkit-gradient(linear, left top, right top, from(#ff5858), to(#f857a6)) !important;
+  background: linear-gradient(to right, #ff5858, #f857a6) !important; }
+
+/* line 3, login.style.scss */
+.form-control {
+  border-radius: 20px !important; }
+
+/* line 5, login.style.scss */
+.btn-login {
+  background: #ff4646 !important;
+  border-radius: 20px;
+  color: #fff; }
+  /* line 5, login.style.scss */
+  .btn-login:hover {
+    color: #fff; }
+
+/*# sourceMappingURL=login.style.css.map */

@@ -1,11 +1,35 @@
-/* line 1, style.scss */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,400&display=swap");
+/* line 2, style.scss */
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-/* line 2, style.scss */
+/* line 3, style.scss */
+body {
+  font-family: 'Rubik', sans-serif; }
+
+/* line 4, style.scss */
+#dreamart-loader {
+  width: 100%;
+  height: 100vh;
+  background: #fff url("../images/126.gif") no-repeat center;
+  z-index: 99999;
+  position: fixed; }
+
+/* line 5, style.scss */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
+/* line 6, style.scss */
+.dreamart-header {
+  background: #ff4646;
+  min-height: 100vh; }
+
+/* line 8, style.scss */
 .theme-option {
   width: 100%;
   height: 40px;
@@ -19,7 +43,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  /* line 3, style.scss */
+  /* line 9, style.scss */
   .theme-option div {
     width: 30px;
     height: 30px;
@@ -27,32 +51,97 @@
     border: 1px solid #fff;
     margin-left: 5px;
     opacity: .5; }
-    /* line 3, style.scss */
+    /* line 9, style.scss */
     .theme-option div.active {
       opacity: 1; }
-  /* line 4, style.scss */
+  /* line 10, style.scss */
   .theme-option #theme-default {
     background-color: #fff; }
-  /* line 5, style.scss */
+  /* line 11, style.scss */
   .theme-option #theme-dark {
     background-color: #333533 !important; }
-  /* line 6, style.scss */
+  /* line 12, style.scss */
   .theme-option #theme-green {
     background-color: #00d679; }
-  /* line 7, style.scss */
+  /* line 13, style.scss */
   .theme-option #theme-red {
     background-color: #ff4646; }
-  /* line 8, style.scss */
+  /* line 14, style.scss */
   .theme-option #theme-yellow {
     background-color: #FCF400; }
 
-/* line 10, style.scss */
+/* line 16, style.scss */
 .dreamart-link {
   color: #ff4646 !important;
   margin-right: 20px; }
+  /* line 16, style.scss */
+  .dreamart-link.current {
+    background-color: #ff4646;
+    color: #fff !important;
+    border-radius: 10px; }
 
-/* line 12, style.scss */
+/* line 18, style.scss */
 .dreamart-footer-link {
   color: #fff !important; }
+
+/* line 19, style.scss */
+.fa-hand-point-down {
+  color: #fff;
+  -webkit-animation: myarrow 2s infinite;
+          animation: myarrow 2s infinite;
+  position: absolute;
+  bottom: 10px;
+  left: 50%; }
+
+@-webkit-keyframes myarrow {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); } }
+
+@keyframes myarrow {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); } }
+/* line 26, style.scss */
+.progress-bar {
+  background-color: #ff4646; }
+
+/* line 27, style.scss */
+.facts-card {
+  border-radius: 10px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  /* line 27, style.scss */
+  .facts-card:hover {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px); }
+
+/* line 28, style.scss */
+.facts-items {
+  color: #Ff4646 !important; }
+
+/* line 29, style.scss */
+.client-propic {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px; }
+
+@media (max-width: 992px) {
+  /* line 31, style.scss */
+  .dreamart-link {
+    padding-left: 15px !important;
+    margin-top: 20px !important; } }
 
 /*# sourceMappingURL=style.css.map */

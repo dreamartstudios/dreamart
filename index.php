@@ -319,5 +319,17 @@
     </div><!-- end container-->
   </section>
   <!-- *********************** end client says section ********************************* -->
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="container" style="margin-top: 50px;">
+<div class="row">
+  <div class="col-md-12">
+   
+  </div>
+</div>
+</div>
+
   
 <?php include("dist/includes/footer.php");?>

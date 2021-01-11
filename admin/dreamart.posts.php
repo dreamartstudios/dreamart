@@ -1,4 +1,4 @@
-<?php $page='dashboard';
+<?php $page='posts';
 include("inc/header.php");
 if(!isset($_SESSION['user'])){
     header("Location:index.php");
@@ -16,7 +16,7 @@ if(!isset($_SESSION['user'])){
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <button class="btn btn-danger" id="menu-toggle">&#9780;</button>&nbsp;&nbsp;
-    <a class="navbar-brand" href="#"><?php echo $page;?></a>
+    <a class="navbar-brand" href=""><?php echo $page;?></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,7 +55,7 @@ if(!isset($_SESSION['user'])){
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                        Database</div>
+                        total posts</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">400</div>
                 </div>
                 <div class="col-auto">
@@ -73,7 +73,7 @@ if(!isset($_SESSION['user'])){
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                        User</div>
+                        Total categories</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">15,000</div>
                 </div>
                 <div class="col-auto">
@@ -91,7 +91,8 @@ if(!isset($_SESSION['user'])){
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                        Visitors (perday)</div>
+                    post author
+                        </div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">15,000</div>
                 </div>
                 <div class="col-auto">
@@ -122,31 +123,41 @@ if(!isset($_SESSION['user'])){
 </div><!-- end row -->
 
 <div class="row">
+  <div class="col-md-10 offset-md-1">
+  
+  </div>
+</div>
+<div class="row">
 <div class="col-md-10 offset-md-1">
 <div class="card">
-<div class="card-header text-center">Recent Posts</div>
+<div class="card-header">
+<div class="row d-flex align-itemes-center">
+<div class="col-md-10">
+<div class="text-center">
+<div class="h6 mt-2">All Posts</div>
+</div>
+</div>
+<div class="col-md-2">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add
+</button></div>
+</div>
+</div>
 <div class="card-body">
 <table class="table table-bordered">
-  <thead>
+<thead>
     <tr>
       <th scope="col">SR</th>
       <th scope="col">Title</th>
-      <th scope="col">Authro</th>
+      <th scope="col">Author</th>
       <th scope="col">Date</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>post1</td>
-      <td>admin</td>
-      <td>20/10/20</td>
-      <td><a herf="" class="btn btn-outline-warning"><i class="fas fa-edit"></i></a></td>
-      <td><a herf="" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a></td>
-    </tr>
-    
+  <tbody id="table-data">
+  
+  
   </tbody>
 </table>
 </div>
@@ -163,9 +174,117 @@ if(!isset($_SESSION['user'])){
 </div>
 <!-- /#wrapper -->
 
-
-
-
-
-
 <?php include("inc/footer.php");?>
+
+<script>
+$(document).ready(function(){
+
+function loadpost(){
+  $.ajax({
+    url : "post.load.php",
+    type : "POST",
+    success : function(data){
+      $("#table-data").html(data);
+    }
+
+  });
+}
+loadpost();
+
+$("#submit-form").on('submit', function(e){
+  e.preventDefault();
+
+var form_data = new FormData(this);
+
+$.ajax({
+url : "insert.post.php",
+type : "POST",
+data: form_data,
+contentType: false,
+processData : false,
+success : function(data){
+$("#submit-form").trigger("reset");
+$("#response").html(data);
+loadpost();
+ 
+  
+}
+});
+
+
+});
+
+$(document).on("click",".delete-button", function(){
+var post_id = $(this).data("delete");
+
+
+ $.ajax({
+ url: "delete.post.php",
+ type: "POST",
+ data: {id: post_id},
+ success : function(data){
+  loadpost();
+ } 
+})
+});
+
+});
+
+</script> 
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="card">
+  <div class="card-body">
+  <form  id="submit-form" autocomplete="off">
+        <div class="row mb-3">
+        <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Title" id="postTitle" name="post_title" required>
+        </div>
+        <div class="col-md-6">
+        <!-- <input type="text" class="form-control" placeholder="category" id="postCategory" name="category" required> -->
+        <select class="form-select"  type="text" name="category" required>
+          <option disable>choose ....</option>
+          <option>HTML Tutorials</option>
+          <option>CSS Tutorials</option>
+          <option>JS Tutorials</option>
+          <option>PHP Tutorials</option>
+        </select>
+        </div>
+        </div><!-- end form -row -->
+
+        <div class="row mb-3">
+        <div class="col-md-12">
+        <input type="file" name="file" class="form-control" id="postThumb" required>
+        </div>
+        </div><!-- end form -row -->
+        <div class="row mb-3">
+        <div class="col-md-12">
+        <textarea name="content" id="text_area" cols="30" rows="10" class="form-control"  required></textarea>
+        </div>
+        </div>
+        <div class="text-center">
+        <button type="submit" name="submit"  id="submit" class="btn btn-danger w-50">Add</button>
+        </div>
+        </form>
+        <div id="response"></div>
+  </div>
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

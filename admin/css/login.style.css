@@ -1,25 +1,49 @@
-/* line 1, login.style.scss */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,400&display=swap");
+/* line 2, login.style.scss */
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  font-family: 'Rubik', sans-serif; }
 
-/* line 2, login.style.scss */
+/* line 3, login.style.scss */
 .bg-body {
   background: -webkit-gradient(linear, left top, right top, from(#ff5858), to(#f857a6)) !important;
   background: linear-gradient(to right, #ff5858, #f857a6) !important; }
 
-/* line 3, login.style.scss */
+/* line 4, login.style.scss */
 .form-control {
   border-radius: 20px !important; }
 
 /* line 5, login.style.scss */
+.login_icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ff4646;
+  margin-bottom: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  /* line 5, login.style.scss */
+  .login_icon .fa {
+    color: #fff !important; }
+
+/* line 7, login.style.scss */
 .btn-login {
   background: #ff4646 !important;
   border-radius: 20px;
-  color: #fff; }
-  /* line 5, login.style.scss */
+  color: #fff;
+  margin-top: 20px; }
+  /* line 7, login.style.scss */
   .btn-login:hover {
     color: #fff; }
 

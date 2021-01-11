@@ -1,5 +1,7 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,400&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rubik', sans-serif;}
 .bg-body{background: linear-gradient(to right, #ff5858, #f857a6)!important; }
 .form-control{border-radius: 20px!important;}
+.login_icon{width: 40px; height: 40px; border-radius: 40px; background-color: #ff4646;  margin-bottom: 10px; text-align: center; display: flex; align-items: center; justify-content: center; .fa{color: #fff!important;}}
 
-.btn-login{background: #ff4646!important; border-radius: 20px; color: #fff; &:hover{color: #fff;}}
+.btn-login{background: #ff4646!important; border-radius: 20px; color: #fff; margin-top: 20px; &:hover{color: #fff;}}

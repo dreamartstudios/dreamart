@@ -35,21 +35,21 @@ session_start();
              }
          }
                ?>
-                     <div class="text-center">
-                         <div class="h2 mb-5">Login Here</div>
+                     
+                         <div class="h2 mb-5 text-center">Login Here</div>
                          <form action="<?php $_SERVER['PHP_SELF'];?>" autocomplete="off" method="POST">
-                             <div class="input-group ">
-                                 <label for="username"><i class="fas fa-lock text-danger"></i></label>&nbsp; &nbsp;
-                                 <input type="text" class="form-control" id="userName" name="username" placeholder="User Name" required>
+                             <div class="form-group ">
+                                 <label for="username" class="text-left login_icon"><i class="fas fa-lock text-light"></i></label>
+                                 <input type="text" class="form-control mb-3" id="userName" name="username" placeholder="User Name" required>
                                 </div>
-                                <div class="input-group my-3">
-                                 <label for="username"><i class="fas fa-key text-danger"></i></label>&nbsp; &nbsp;
+                                <div class="form-group">
+                                 <label for="username" class="text-left login_icon"><i class="fas fa-key text-light"></i></label>
                                  <input type="password" class="form-control" id="userPassword" name="userpassword" placeholder="*******" required>
                                 </div>
-                                <button class="btn btn-login w-50" type="submit" id="loginBtn" name="loginBtn">Login</button>
+                               <div class="text-center"> <button class="btn btn-login w-50" type="submit" id="loginBtn" name="loginBtn">Login</button></div>
                          </form>
                        
-                     </div>
+                     
                  </div>
              </div>
          </div>

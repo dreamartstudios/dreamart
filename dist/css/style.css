@@ -72,7 +72,7 @@ body {
 
 /* line 16, style.scss */
 .dreamart-link {
-  color: #ff4646 !important;
+  color: #020f29 !important;
   margin-right: 20px; }
   /* line 16, style.scss */
   .dreamart-link.current {
@@ -85,13 +85,18 @@ body {
   color: #fff !important; }
 
 /* line 19, style.scss */
-.fa-hand-point-down {
-  color: #fff;
-  -webkit-animation: myarrow 2s infinite;
-          animation: myarrow 2s infinite;
-  position: absolute;
-  bottom: 10px;
-  left: 50%; }
+.dreamart-hero {
+  min-height: 600px; }
+
+/* line 20, style.scss */
+.hero-text {
+  margin-top: 140px; }
+
+/* line 21, style.scss */
+.link-btn {
+  background-color: #020f29;
+  border-radius: 10px;
+  color: #fff !important; }
 
 @-webkit-keyframes myarrow {
   0% {
@@ -114,32 +119,32 @@ body {
   100% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px); } }
-/* line 26, style.scss */
+/* line 29, style.scss */
 .progress-bar {
   background-color: #ff4646; }
 
-/* line 27, style.scss */
+/* line 30, style.scss */
 .facts-card {
   border-radius: 10px;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out; }
-  /* line 27, style.scss */
+  /* line 30, style.scss */
   .facts-card:hover {
     -webkit-transform: translateY(-6px);
             transform: translateY(-6px); }
 
-/* line 28, style.scss */
+/* line 31, style.scss */
 .facts-items {
   color: #Ff4646 !important; }
 
-/* line 29, style.scss */
+/* line 32, style.scss */
 .client-propic {
   width: 80px;
   height: 80px;
   border-radius: 80px; }
 
 @media (max-width: 992px) {
-  /* line 31, style.scss */
+  /* line 34, style.scss */
   .dreamart-link {
     padding-left: 15px !important;
     margin-top: 20px !important; } }

@@ -251,7 +251,7 @@ var post_id = $(this).data("delete");
         <div class="col-md-6">
         <input type="text" class="form-control" placeholder="Title" id="postTitle" name="post_title" required>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-2">
         <!-- <input type="text" class="form-control" placeholder="category" id="postCategory" name="category" required> -->
         <select class="form-select"  type="text" name="category" required>
           <option disable>choose ....</option>

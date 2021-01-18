@@ -13,10 +13,13 @@ body{font-family: 'Rubik', sans-serif;}
     #theme-red{ background-color: #ff4646;}
     #theme-yellow{ background-color: #FCF400;}
     }
-    .dreamart-link{color: #ff4646!important; margin-right: 20px;  &.current{background-color: #ff4646; color: #fff!important; border-radius: 10px;}}
+    .dreamart-link{color: #020f29!important; margin-right: 20px;  &.current{background-color: #ff4646; color: #fff!important; border-radius: 10px;}}
     
 .dreamart-footer-link{color: #fff!important;}
-.fa-hand-point-down{color: #fff; animation: myarrow 2s infinite; position: absolute; bottom: 10px; left: 50%; }
+.dreamart-hero{min-height: 600px;}
+.hero-text{margin-top: 140px;}
+.link-btn{ background-color: #020f29;  border-radius: 10px; color: #fff!important;}
+//.fa-hand-point-down{color: #fff; animation: myarrow 2s infinite; position: absolute; bottom: 10px; left: 50%; }
 @keyframes myarrow {
     0%{transform: translateY(-10px);}
     50%{transform: translateY(10px);}
@@ -28,4 +31,6 @@ body{font-family: 'Rubik', sans-serif;}
 .facts-items{color: #Ff4646!important;}
 .client-propic{width:80px; height:80px; border-radius: 80px;}
 
-@media(max-width:992px){.dreamart-link{padding-left: 15px!important; margin-top: 20px!important;}}
+@media(max-width:992px){.dreamart-link{padding-left: 15px!important; margin-top: 20px!important;}
+
+}
